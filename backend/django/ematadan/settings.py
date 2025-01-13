@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import json
 from pathlib import Path
-
+import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 with open(BASE_DIR / "config.json") as config_file:
@@ -130,3 +130,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3001',  # your frontend origin
     # other origins as needed
 ]
+# settings.py
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

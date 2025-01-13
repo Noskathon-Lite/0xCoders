@@ -7,6 +7,7 @@ import Results  from "./views/Results";
 import Settings from "./views/Settings";
 import Info from "./views/Info";
 import Candidate from "./views/Candidates";
+import UserDetail from "./views/UserDetail";
 
 function AdminRoutes(){
     return (
@@ -15,6 +16,7 @@ function AdminRoutes(){
             <Route path="admin/users" element={<Users/>}/>
             <Route path="admin/candidates" element={<Candidate/>}/>
             <Route path='admin/votes' element={<Votes/>}/>
+            <Route path="/voters/:id" element={<UserDetail/>} />
             <Route path='admin/results' element={<Results/>}/>
             <Route path='admin/settings' element={<Settings/>}/>
             <Route path='' element={<Info/>}/>
